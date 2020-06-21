@@ -1,4 +1,4 @@
-Write an SQL query to find nth largest salary along with employee name.
+A)Write an SQL query to find nth largest salary along with employee name.
 
 
   
@@ -23,3 +23,23 @@ COUNT(DISTINCT Salary)
         WHERE
  
         e2.Salary > e1.Salary);
+
+
+B)Write a query to update salary of employees to 5000 whose age is 30+
+
+
+UPDATE salary 
+SET 
+    
+salary = 5000
+
+WHERE
+    EmpID IN (SELECT 
+ EmpID
+ FROM
+ Employee
+ WHERE
+ DATEDIFF(CURDATE(), Date_of_Birth) / 365.25 > 23);
+
+
+

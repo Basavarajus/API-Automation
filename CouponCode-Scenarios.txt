@@ -1,12 +1,8 @@
 Coupon Code Scenarios
 
 1. Re-use the coupon code for same product.
-
 2. Check for issued coupons are valid or invalid (because some coupon codes may be still under the development stage).
-
 3. Check for Grand Total after applying coupon code.
-
 4. Check discounted price in Order Confirmation page also.
-
 5. Use Coupon code for Guest User.
 6.the same coupon should not be used by other members
