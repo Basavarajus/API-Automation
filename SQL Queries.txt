@@ -1,0 +1,25 @@
+Write an SQL query to find nth largest salary along with employee name.
+
+
+  
+ 
+  
+   SELECT 
+   EmpName, Salary
+ 
+             FROM
+    Employee e0
+       
+        INNER JOIN
+    Salary e1 ON e0.EmpID = e1.EmpID
+
+        WHERE
+  
+        N - 1 = (SELECT 
+COUNT(DISTINCT Salary)
+ FROM
+ Salary e2
+
+        WHERE
+ 
+        e2.Salary > e1.Salary);
