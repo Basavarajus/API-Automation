@@ -39,7 +39,7 @@ WHERE
  FROM
  Employee
  WHERE
- DATEDIFF(CURDATE(), Date_of_Birth) / 365.25 > 23);
+ DATEDIFF(CURDATE(), Date_of_Birth) / 365.25 > 30);
 
 
 
