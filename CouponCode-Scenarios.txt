@@ -1,8 +1,24 @@
 Coupon Code Scenarios
 
-1. Re-use the coupon code for same product.
-2. Check for issued coupons are valid or invalid (because some coupon codes may be still under the development stage).
-3. Check for Grand Total after applying coupon code.
-4. Check discounted price in Order Confirmation page also.
-5. Use Coupon code for Guest User.
-6.the same coupon should not be used by other members
+Posive Cases:
+1.Promo code can apply only if the transaction is min Rs 1000.
+2.Promo code validation should be case sensitive.
+3.Promo code field should not accept more than 7 charatcters.
+4.If the coupon is valid maximum offer should be 300.
+5.Check for Grand Total after applying coupon code.
+6.Check discounted price in Order Confirmation page also.
+7.Check for issued coupons are valid or invalid (because some coupon codes may be still under the development stage).
+8.Check all format and messages after applying promocode.
+
+
+
+Negative Cases:
+1.User should be able to apply any one coupon at a time.
+2.The same coupon should not be used by other members.
+3.User should not be able to apply coupon code if the cart value is less than Rs 1000.
+4.It should not allow if the validity of the coupon code is expired
+
+Edge Cases :
+1.If user not able to complete the payment coupon code ,same should be able to apply next time.
+2.It should not allow if the same user tries to apply from two different system.
+3.

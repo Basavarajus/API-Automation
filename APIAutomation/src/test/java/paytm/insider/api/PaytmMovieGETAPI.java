@@ -5,6 +5,7 @@ import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -26,7 +27,7 @@ public class PaytmMovieGETAPI {
 	void getMovieDetails() throws UnsupportedEncodingException, ParseException {
 		//Specify BaseURI
 		RestAssured.baseURI="https://apiproxy.paytm.com/v2/movies/upcoming";
-		
+		Scanner scan = new Scanner(System.in);
 		//Request object
 		RequestSpecification httpRequest= RestAssured.given();
 		
@@ -71,7 +72,6 @@ public class PaytmMovieGETAPI {
 			System.out.println(Title);
 		}
 		  
-	
 		
 		//status code validation
 		int statuscode =response.getStatusCode();
