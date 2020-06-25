@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3818" started-at="2020-06-25T19:03:46 GMT+05:30" finished-at="2020-06-25T19:03:49 GMT+05:30">
+  <suite name="Default suite" duration-ms="4717" started-at="2020-06-25T19:32:32 GMT+05:30" finished-at="2020-06-25T19:32:37 GMT+05:30">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3818" started-at="2020-06-25T19:03:46 GMT+05:30" finished-at="2020-06-25T19:03:49 GMT+05:30">
+    <test name="Default test" duration-ms="4717" started-at="2020-06-25T19:32:32 GMT+05:30" finished-at="2020-06-25T19:32:37 GMT+05:30">
       <class name="paytm.insider.api.PaytmMovieGETAPI">
-        <test-method status="FAIL" signature="getMovieDetails()[pri:0, instance:paytm.insider.api.PaytmMovieGETAPI@711f39f9]" name="getMovieDetails" duration-ms="3771" started-at="2020-06-25T19:03:46 GMT+05:30" finished-at="2020-06-25T19:03:49 GMT+05:30">
+        <test-method status="FAIL" signature="getMovieDetails()[pri:0, instance:paytm.insider.api.PaytmMovieGETAPI@711f39f9]" name="getMovieDetails" duration-ms="4654" started-at="2020-06-25T19:32:32 GMT+05:30" finished-at="2020-06-25T19:32:37 GMT+05:30">
           <exception class="java.text.ParseException">
             <message>
-              <![CDATA[Unparseable date: " "]]>
+              <![CDATA[Unparseable date: " null"]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.text.ParseException: Unparseable date: " "
+              <![CDATA[java.text.ParseException: Unparseable date: " null"
 at java.text.DateFormat.parse(Unknown Source)
-at paytm.insider.api.PaytmMovieGETAPI.getMovieDetails(PaytmMovieGETAPI.java:74)
+at paytm.insider.api.PaytmMovieGETAPI.getMovieDetails(PaytmMovieGETAPI.java:75)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)

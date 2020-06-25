@@ -46,6 +46,7 @@ public class PaytmMovieGETAPI {
 		// status line
 		String statusline = response.getStatusLine();
 		Assert.assertEquals(statusline, "HTTP/1.1 200 OK");
+		System.out.println("Status line: " +statusline);
 
 		String MovieDates = response.jsonPath().getString("upcomingMovieData.releaseDate").replaceAll("[\\[\\](){}]",
 				"");
@@ -53,10 +54,16 @@ public class PaytmMovieGETAPI {
 		String[] urls = url.split(",");
 
 		for (String URL : urls) {
-			System.out.println();
 			URL.endsWith(".jpg"); /* .jpg url validation */
 		}
+		
+		String MovieTitle = response.jsonPath().getString("upcomingMovieData.movieTitle");
+		String[] Titles = MovieTitle.split(",");
 
+		System.out.println("MovieName received from Response ");
+		for (String Title : Titles) {
+			System.out.println(Title);
+		}
 		String[] MoviesDates2 = MovieDates.split(",");
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd ");
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
@@ -65,23 +72,11 @@ public class PaytmMovieGETAPI {
 		java.util.Date Today = format.parse(TodayDate);
 		long TodayUnixDate = Today.getTime();
 		for (String Date : MoviesDates2) {
-			// System.out.println(Date);
-			if (Date == null) {
-				continue;
-			} else {
-				java.util.Date date = format.parse(Date);
+			java.util.Date date = format.parse(Date);
 				long ReleaseDate = date.getTime();
 				Assert.assertTrue(ReleaseDate > TodayUnixDate);
+				
 			}
-			String MovieTitle = response.jsonPath().getString("upcomingMovieData.movieTitle");
-			String[] Titles = MovieTitle.split(",");
-
-			System.out.println("MovieName received from Response " + MovieTitle);
-			for (String Title : Titles) {
-				System.out.println(Title);
 			}
-
-		}
-
-	}
 }
+
